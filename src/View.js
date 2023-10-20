@@ -5,8 +5,18 @@ class View {
     this.game = game;
   }
 
+constructor(game) {
+  this.game= game
+ 
+}
+
+dev
+
   render() {
     const yourTeamName = 'Elbrus';
+console.log(this.hero);
+console.log(this.boomerang);
+console.log(this.enemy);
 
     // Тут всё рисуем.
     console.clear();
