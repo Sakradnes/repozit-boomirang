@@ -10,14 +10,15 @@ class Boomerang {
 
   fly() {
     this.moveRight();
-    //  if (this.boomerang.position === this.enemy.position) {
-    //   this.enemy.die();
+    if (this.boomerang.position === this.enemy.position) {
+      this.enemy.die();
+    }
     this.moveLeft();
   }
 
   moveLeft() {
     // Идём влево.
-    this.position -= 1;
+    this.position -= 2;
   }
 
   moveRight() {
