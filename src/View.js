@@ -1,11 +1,16 @@
 // Сделаем отдельный класс для отображения игры в консоли.
 
 class View {
+  constructor(game) {
+    this.game = game;
+  }
+
 constructor(game) {
   this.game= game
  
 }
 
+dev
 
   render() {
     const yourTeamName = 'Elbrus';
