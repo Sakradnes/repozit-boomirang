@@ -7,9 +7,9 @@ class View {
 
   render() {
     const yourTeamName = 'Elbrus';
-console.log(this.hero);
-console.log(this.boomerang);
-console.log(this.enemy);
+    console.log(this.hero);
+    console.log(this.boomerang);
+    console.log(this.enemy);
 
     // Тут всё рисуем.
     console.clear();
