@@ -18,14 +18,10 @@ class Game {
     this.boomerang = new Boomerang ()
     this.enemy = new Enemy({position: trackLength-1});
 
-    this.trackLength = trackLength;
-    this.hero = new Hero({ position: 0 });
-    this.boomerang = new Boomerang();
-    this.enemy = new Enemy({position: trackLength - 1});
-
     this.view = new View(this);
     this.track = [];
     this.regenerateTrack();
+    //fasfasfasfsa
   }
 
   regenerateTrack() {
@@ -37,12 +33,6 @@ class Game {
     this.track[this.hero.position] = this.hero.skin,
     this.track[this.enemy.position] = this.enemy.skin,
     this.track[this.boomerang.position+1] = this.boomerang.skin
-
-
-    (this.track = new Array(this.trackLength).fill(' ')),
-      (this.track[this.hero.position] = this.hero.skin),
-      (this.track[this.enemy.position] = this.enemy.skin),
-      (this.track[this.boomerang.position + 1] = this.boomerang.skin);
 
   }
 
@@ -77,9 +67,6 @@ class Game {
       
     },500);
    
-
-
-    }, 3000);
 
   }
 }

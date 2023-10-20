@@ -5,13 +5,6 @@ class View {
     this.game = game;
   }
 
-constructor(game) {
-  this.game= game
- 
-}
-
-dev
-
   render() {
     const yourTeamName = 'Elbrus';
 console.log(this.hero);
