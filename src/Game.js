@@ -15,7 +15,7 @@ class Game {
     this.trackLength = trackLength;
     this.hero = new Hero({ position: 0 });
     this.boomerang = new Boomerang();
-    this.enemy = new Enemy();
+    this.enemy = new Enemy({position: trackLength - 1});
     this.view = new View(this);
     this.track = [];
     this.regenerateTrack();
