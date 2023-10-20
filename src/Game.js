@@ -15,7 +15,7 @@ class Game {
     this.trackLength = trackLength
     this.hero = new Hero({position: 0}); 
     this.boomerang = new Boomerang ()
-    this.enemy = new Enemy();
+    this.enemy = new Enemy({position: trackLength-1});
     this.view = new View(this);
     this.track = [];
     this.regenerateTrack() 
@@ -36,14 +36,32 @@ class Game {
       this.hero.die();
     }
   }
+  check_2() {
+    if (this.boomerang.position >= this.enemy.position) {
+      this.enemy.die();
+      this.boomerang.fly()
+    }
+  }
+
+
 
   play() {
     setInterval(() => {
       // Let's play!
+      this.enemy.moveLeft()
       this.check();
+      this.check_2()
       this.regenerateTrack();
-      this.view.render(this.track);
-    },3000);
+      
+      setInterval(() => {
+        this.boomerang.moveRight()
+        this.view.render(this.track);
+      },200);
+      
+      
+    },500);
+   
+
   }
 }
 
